@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "frozen": true,
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "device": "cpu",
+  "neurons": 138639,
+  "edges": 15091983,
+  "checks": {
+    "real_reference": true,
+    "real_action": true,
+    "rewired_reference": true,
+    "rewired_action": true,
+    "anatomy_alignment": true,
+    "index.html": true,
+    "app.js": true,
+    "motion.js": true,
+    "brain.html": true,
+    "brain.js": true,
+    "style.css": true,
+    "brain.css": true
+  },
+  "timings": {
+    "real": {
+      "median_ms": 20.671199999924283,
+      "p95_ms": 22.045159999106545
+    },
+    "rewired": {
+      "median_ms": 19.482499999867287,
+      "p95_ms": 21.003320001182143
+    }
+  },
+  "passed": true
+}

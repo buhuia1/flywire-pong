@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "url": "https://github.com/buhuia1/flywire-pong/releases/download/v1.0.0/FlyWire-Pong-Runtime-Data-v1.0.0.zip",
+  "sha256": "26e81a1785c4c785c2fe4f78caded9e7132e889826596c187bf72265fb218661",
+  "bytes": 117613570,
+  "files": {
+    "data/flywire_graph.npz": {
+      "bytes": 57219780,
+      "sha256": "6e9f038611caaf8773380ef735f062ad1b14d75727b2faf5d5e5744e51a81b6f"
+    },
+    "data/rewired_graph.npz": {
+      "bytes": 60393528,
+      "sha256": "ba6528d2752602c3cafd712bb277c10eb703d13b3cfb5cc8448ac512f8f92f1a"
+    }
+  }
+}

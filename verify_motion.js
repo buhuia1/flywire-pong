@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {projectBall}=require('./web/motion.js');
+const game={opponent:'human',waiting_serve:false,ball:{x:.5,y:.5,vx:.75,vy:.2}};
+const a=projectBall(game,.016),b=projectBall(game,.032);
+assert(a.x>.5&&b.x>a.x);assert(Math.abs(a.x-.512)<1e-9);
+const bounce=projectBall({...game,ball:{x:.5,y:.98,vx:.2,vy:1}},.05);
+assert(Math.abs(bounce.y-.946)<1e-9);
+const face=projectBall({...game,ball:{x:.92,y:.5,vx:.75,vy:0}},.2);
+assert(Math.abs(face.x-.933)<1e-9);
+assert.deepEqual(projectBall({...game,waiting_serve:true},.1),game.ball);
+assert.deepEqual(projectBall(game,10),projectBall(game,.2));
+console.log('PASS: continuous motion, top/bottom reflection, no invented paddle collision, waiting freeze, bounded prediction.');

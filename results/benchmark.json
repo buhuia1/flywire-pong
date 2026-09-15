@@ -1,0 +1,989 @@
+{
+  "version": 2,
+  "created_utc": "2026-09-15T10:53:33Z",
+  "task": "fixed independent left-paddle serves; not human-match scores or a learning curve",
+  "seeds": [
+    9101,
+    9102,
+    9103
+  ],
+  "encounters_per_seed": 35,
+  "difficulties": {
+    "easy": {
+      "label": "\u5165\u95e8",
+      "speed": 0.46,
+      "paddle_half": 0.115
+    },
+    "normal": {
+      "label": "\u8fdb\u9636",
+      "speed": 0.75,
+      "paddle_half": 0.078
+    },
+    "hard": {
+      "label": "\u6311\u6218",
+      "speed": 1.1,
+      "paddle_half": 0.048
+    }
+  },
+  "profiles": [
+    {
+      "difficulty": "easy",
+      "results": [
+        {
+          "mode": "fly",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "rewired",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "direct",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "untrained",
+          "mean_hit_rate": 0.21904761904761902,
+          "min_hit_rate": 0.14285714285714285,
+          "max_hit_rate": 0.2857142857142857,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 8,
+              "misses": 27,
+              "hit_rate": 0.22857142857142856,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 10,
+              "misses": 25,
+              "hit_rate": 0.2857142857142857,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 5,
+              "misses": 30,
+              "hit_rate": 0.14285714285714285,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "disconnected",
+          "mean_hit_rate": 0.19999999999999998,
+          "min_hit_rate": 0.17142857142857143,
+          "max_hit_rate": 0.2571428571428571,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 9,
+              "misses": 26,
+              "hit_rate": 0.2571428571428571,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "silenced",
+          "mean_hit_rate": 0.19999999999999998,
+          "min_hit_rate": 0.17142857142857143,
+          "max_hit_rate": 0.2571428571428571,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 9,
+              "misses": 26,
+              "hit_rate": 0.2571428571428571,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "random",
+          "mean_hit_rate": 0.22857142857142856,
+          "min_hit_rate": 0.17142857142857143,
+          "max_hit_rate": 0.2857142857142857,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 10,
+              "misses": 25,
+              "hit_rate": 0.2857142857142857,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 8,
+              "misses": 27,
+              "hit_rate": 0.22857142857142856,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 1280
+            }
+          ]
+        },
+        {
+          "mode": "rule",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1271
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 1280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "difficulty": "normal",
+      "results": [
+        {
+          "mode": "fly",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "rewired",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "direct",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "untrained",
+          "mean_hit_rate": 0.20000000000000004,
+          "min_hit_rate": 0.17142857142857143,
+          "max_hit_rate": 0.22857142857142856,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 7,
+              "misses": 28,
+              "hit_rate": 0.2,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 8,
+              "misses": 27,
+              "hit_rate": 0.22857142857142856,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "disconnected",
+          "mean_hit_rate": 0.14285714285714285,
+          "min_hit_rate": 0.11428571428571428,
+          "max_hit_rate": 0.17142857142857143,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 4,
+              "misses": 31,
+              "hit_rate": 0.11428571428571428,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 5,
+              "misses": 30,
+              "hit_rate": 0.14285714285714285,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "silenced",
+          "mean_hit_rate": 0.14285714285714285,
+          "min_hit_rate": 0.11428571428571428,
+          "max_hit_rate": 0.17142857142857143,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 4,
+              "misses": 31,
+              "hit_rate": 0.11428571428571428,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 5,
+              "misses": 30,
+              "hit_rate": 0.14285714285714285,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "random",
+          "mean_hit_rate": 0.1714285714285714,
+          "min_hit_rate": 0.14285714285714285,
+          "max_hit_rate": 0.2,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 7,
+              "misses": 28,
+              "hit_rate": 0.2,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 5,
+              "misses": 30,
+              "hit_rate": 0.14285714285714285,
+              "ticks": 790
+            }
+          ]
+        },
+        {
+          "mode": "rule",
+          "mean_hit_rate": 1.0,
+          "min_hit_rate": 1.0,
+          "max_hit_rate": 1.0,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 783
+            },
+            {
+              "seed": 9102,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 791
+            },
+            {
+              "seed": 9103,
+              "hits": 35,
+              "misses": 0,
+              "hit_rate": 1.0,
+              "ticks": 790
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "results": [
+        {
+          "mode": "fly",
+          "mean_hit_rate": 0.7619047619047619,
+          "min_hit_rate": 0.6857142857142857,
+          "max_hit_rate": 0.8571428571428571,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 30,
+              "misses": 5,
+              "hit_rate": 0.8571428571428571,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 24,
+              "misses": 11,
+              "hit_rate": 0.6857142857142857,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 26,
+              "misses": 9,
+              "hit_rate": 0.7428571428571429,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "rewired",
+          "mean_hit_rate": 0.7333333333333334,
+          "min_hit_rate": 0.6571428571428571,
+          "max_hit_rate": 0.8285714285714286,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 29,
+              "misses": 6,
+              "hit_rate": 0.8285714285714286,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 23,
+              "misses": 12,
+              "hit_rate": 0.6571428571428571,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 25,
+              "misses": 10,
+              "hit_rate": 0.7142857142857143,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "direct",
+          "mean_hit_rate": 0.7523809523809524,
+          "min_hit_rate": 0.6571428571428571,
+          "max_hit_rate": 0.8571428571428571,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 30,
+              "misses": 5,
+              "hit_rate": 0.8571428571428571,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 23,
+              "misses": 12,
+              "hit_rate": 0.6571428571428571,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 26,
+              "misses": 9,
+              "hit_rate": 0.7428571428571429,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "untrained",
+          "mean_hit_rate": 0.11428571428571428,
+          "min_hit_rate": 0.05714285714285714,
+          "max_hit_rate": 0.17142857142857143,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 2,
+              "misses": 33,
+              "hit_rate": 0.05714285714285714,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 4,
+              "misses": 31,
+              "hit_rate": 0.11428571428571428,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "disconnected",
+          "mean_hit_rate": 0.11428571428571428,
+          "min_hit_rate": 0.08571428571428572,
+          "max_hit_rate": 0.14285714285714285,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 5,
+              "misses": 30,
+              "hit_rate": 0.14285714285714285,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 3,
+              "misses": 32,
+              "hit_rate": 0.08571428571428572,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 4,
+              "misses": 31,
+              "hit_rate": 0.11428571428571428,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "silenced",
+          "mean_hit_rate": 0.11428571428571428,
+          "min_hit_rate": 0.08571428571428572,
+          "max_hit_rate": 0.14285714285714285,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 5,
+              "misses": 30,
+              "hit_rate": 0.14285714285714285,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 3,
+              "misses": 32,
+              "hit_rate": 0.08571428571428572,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 4,
+              "misses": 31,
+              "hit_rate": 0.11428571428571428,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "random",
+          "mean_hit_rate": 0.12380952380952381,
+          "min_hit_rate": 0.08571428571428572,
+          "max_hit_rate": 0.17142857142857143,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 3,
+              "misses": 32,
+              "hit_rate": 0.08571428571428572,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 4,
+              "misses": 31,
+              "hit_rate": 0.11428571428571428,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 6,
+              "misses": 29,
+              "hit_rate": 0.17142857142857143,
+              "ticks": 545
+            }
+          ]
+        },
+        {
+          "mode": "rule",
+          "mean_hit_rate": 0.7523809523809524,
+          "min_hit_rate": 0.6571428571428571,
+          "max_hit_rate": 0.8571428571428571,
+          "runs": [
+            {
+              "seed": 9101,
+              "hits": 30,
+              "misses": 5,
+              "hit_rate": 0.8571428571428571,
+              "ticks": 543
+            },
+            {
+              "seed": 9102,
+              "hits": 23,
+              "misses": 12,
+              "hit_rate": 0.6571428571428571,
+              "ticks": 545
+            },
+            {
+              "seed": 9103,
+              "hits": 26,
+              "misses": 9,
+              "hit_rate": 0.7428571428571429,
+              "ticks": 545
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "mode": "fly",
+      "mean_hit_rate": 1.0,
+      "min_hit_rate": 1.0,
+      "max_hit_rate": 1.0,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "rewired",
+      "mean_hit_rate": 1.0,
+      "min_hit_rate": 1.0,
+      "max_hit_rate": 1.0,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "direct",
+      "mean_hit_rate": 1.0,
+      "min_hit_rate": 1.0,
+      "max_hit_rate": 1.0,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "untrained",
+      "mean_hit_rate": 0.20000000000000004,
+      "min_hit_rate": 0.17142857142857143,
+      "max_hit_rate": 0.22857142857142856,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 7,
+          "misses": 28,
+          "hit_rate": 0.2,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 8,
+          "misses": 27,
+          "hit_rate": 0.22857142857142856,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 6,
+          "misses": 29,
+          "hit_rate": 0.17142857142857143,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "disconnected",
+      "mean_hit_rate": 0.14285714285714285,
+      "min_hit_rate": 0.11428571428571428,
+      "max_hit_rate": 0.17142857142857143,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 6,
+          "misses": 29,
+          "hit_rate": 0.17142857142857143,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 4,
+          "misses": 31,
+          "hit_rate": 0.11428571428571428,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 5,
+          "misses": 30,
+          "hit_rate": 0.14285714285714285,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "silenced",
+      "mean_hit_rate": 0.14285714285714285,
+      "min_hit_rate": 0.11428571428571428,
+      "max_hit_rate": 0.17142857142857143,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 6,
+          "misses": 29,
+          "hit_rate": 0.17142857142857143,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 4,
+          "misses": 31,
+          "hit_rate": 0.11428571428571428,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 5,
+          "misses": 30,
+          "hit_rate": 0.14285714285714285,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "random",
+      "mean_hit_rate": 0.1714285714285714,
+      "min_hit_rate": 0.14285714285714285,
+      "max_hit_rate": 0.2,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 6,
+          "misses": 29,
+          "hit_rate": 0.17142857142857143,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 7,
+          "misses": 28,
+          "hit_rate": 0.2,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 5,
+          "misses": 30,
+          "hit_rate": 0.14285714285714285,
+          "ticks": 790
+        }
+      ]
+    },
+    {
+      "mode": "rule",
+      "mean_hit_rate": 1.0,
+      "min_hit_rate": 1.0,
+      "max_hit_rate": 1.0,
+      "runs": [
+        {
+          "seed": 9101,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 783
+        },
+        {
+          "seed": 9102,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 791
+        },
+        {
+          "seed": 9103,
+          "hits": 35,
+          "misses": 0,
+          "hit_rate": 1.0,
+          "ticks": 790
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 59.945135999998456,
+  "brain_config": {
+    "seed": 17,
+    "gain": 0.9,
+    "leak": 0.8,
+    "substeps": 2,
+    "neurons": 138639,
+    "edges": 15091983,
+    "device": "cuda",
+    "observed_neurons": 192,
+    "graph": "real"
+  },
+  "initial_serve_control": "Exact same trial seeds and centered paddle per serve; reset neural state per trial.",
+  "interpretation": "One source-shuffled graph with separately calibrated readout. No online learning; no biological superiority claim."
+}

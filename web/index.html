@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FlyWire · 与果蝇对打</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<main>
+  <header class="top"><div class="brand"><span class="mark">F</span><div><b>FlyWire Play Lab</b><small>真实连接组 · 人机对打与对照实验</small></div></div><span id="connection" class="connection">正在连接本地网络…</span></header>
+  <p id="share-note" class="share-note" hidden>朋友试玩 · 每个浏览器独立一局 · 最多 4 位同时在线。若你正在提供算力的这台电脑上玩，请用 <a href="http://127.0.0.1:8741/">本机直连入口</a>，避免操作绕经公网。其他朋友继续使用本页。</p>
+  <section class="intro"><div><span class="eyebrow">EXPERIMENT 02 / YOU × FLYWIRE</span><h1>你来出招，果蝇来接球。</h1><p><span class="fly-text">左侧：果蝇网络</span>自动控制。<span class="player-text">右侧：你</span>移动球拍，并决定下一次回球的角度。</p><span class="learning-tag">动作读出已训练 · 当前游戏中不继续学习</span></div><div class="graph-facts"><b id="neurons">—</b><span>实测图中的神经元</span><small id="edges">连接数据加载中</small></div></section>
+  <div class="pipeline"><span>01 <b>球的位置与速度</b></span><i>→</i><span>02 <b>果蝇连接图中的模拟活动</b></span><i>→</i><span>03 <b>固定的动作读出</b></span><i>→</i><span>04 <b>左侧球拍</b></span></div>
+  <section class="workspace">
+    <div class="play-panel">
+      <div class="panel-heading"><h2>对打球场</h2><span id="mode-label">果蝇网络</span><span class="live-dot" id="run-dot"></span></div>
+      <div class="setup-controls"><label>右侧由谁控制<select id="opponent"><option value="human">我与果蝇对打</option><option value="wall">自动演示 · 右侧反弹墙</option></select></label><label>难度<select id="difficulty"><option value="easy">入门 · 慢球 / 宽球拍</option><option value="normal" selected>进阶 · 快球 / 窄球拍</option><option value="hard">挑战 · 高速 / 极窄球拍</option></select></label></div>
+      <div class="score"><div><span>左侧接球</span><b id="hits">0</b></div><div><span>左侧漏球</span><b id="misses">0</b></div><div><span>左侧接球率</span><b id="rate">—</b></div><div><span>最长连续接球</span><b id="rally">0</b></div></div>
+      <div class="court-wrap"><canvas id="court" width="900" height="500" tabindex="0" aria-label="对打球场：左侧神经网络，右侧由你控制"></canvas><div class="court-caption"><span id="court-label">◂ 左侧：果蝇网络</span><span id="right-score">右侧：你 · 接球 0 / 漏球 0</span><span id="game-time">游戏时间 0.0 s</span></div></div>
+      <div class="controls"><button id="serve" class="primary">发球 · 空格</button><button id="pause">暂停</button><button id="reset">新一局</button><span id="duel-status" class="duel-status">移动右球拍、选好角度，再发球</span></div>
+      <p id="latency-note" class="caption" role="status">正在测量连接延迟…</p>
+      <div id="player-controls" class="player-controls"><label><span>你的球拍高度 <small>上 ↔ 下</small></span><input id="player-height" aria-label="右侧球拍高度" type="range" min="0" max="100" value="50"></label><label><span>你的回球方向 <b id="aim-label">向上 20°</b></span><input id="aim" aria-label="右侧回球角度" type="range" min="-55" max="55" value="-20"></label><p>鼠标在球场内上下移动，或触屏拖动，即可移动右侧蓝色球拍。方向滑杆决定发球和下一次右侧回球的角度。键盘：↑↓ 移动，←→ 调方向，空格发球。</p></div>
+      <div class="controller-row"><label>左侧控制器 / 对照<select id="mode"><option value="fly">真实果蝇网络 · 已训练读出</option><option value="rewired">随机重连网络 · 同样训练读出</option><option value="direct">直接游戏状态 · 同样训练读出</option><option value="untrained">真实果蝇网络 · 随机读出</option><option value="disconnected">断开全部连接 · 固定读出</option><option value="silenced">关闭感觉输入 · 固定读出</option><option value="random">随机动作对照</option><option value="rule">规则跟球对照</option></select></label></div>
+      <div class="session-line"><span id="seed">种子 —</span><span>切换设置会重开，保留相同种子</span><button id="export" class="text-button">导出本局记录 ↗</button></div><p id="mode-note" class="mode-note"></p>
+    </div>
+    <aside class="neural-panel">
+      <div class="panel-heading"><h2>左侧控制器的网络活动</h2><span id="graph-label">REAL CONNECTOME</span></div>
+      <p class="caption"><a href="/brain" target="_blank" rel="noopener">打开三维胞体图，查看同一局的模拟活动 ↗</a></p>
+      <div class="neural-key"><span>相对活动 / a.u.</span><span><i class="swatch negative"></i>负 <i class="swatch positive"></i>正</span></div><canvas id="activity" width="560" height="340" aria-label="当前网络 192 个下游节点的模拟活动热图"></canvas><p class="caption" id="activity-caption">192 个下游神经元的模拟活动；不是实测放电。悬停可查看节点 ID。</p>
+      <div class="actuator"><span>左侧读出动作</span><strong id="action">0.00</strong><div class="action-track"><span>上</span><i id="action-marker"></i><span>下</span></div></div><div class="timing"><div><b id="latency">—</b><span>网络计算 / ms</span></div><div><b id="hz">—</b><span>游戏更新 / 秒</span></div></div>
+      <div class="experiment-tip"><b>试试看</b><p>先向上回球，再改成向下回球，观察左侧如何响应。选择“挑战”档后，球更快、左球拍更窄。切换随机重连对照时，左侧仍由该网络自动控制。</p></div><h3>事件记录</h3><ul id="events" class="events"><li>等待你发球</li></ul>
+    </aside>
+  </section>
+  <section class="results-panel"><div class="panel-heading"><h2>固定发球的对照成绩</h2><span id="test-size">读取已运行的测试…</span></div><div id="benchmarks" class="benchmark-table-wrap"></div><p>每个控制器面对相同的独立发球，开始时球拍居中、网络状态重置。表格是预先运行的独立测试，和当前真人对打的成绩分开。它是性能对照，不是随时间学习的曲线。</p></section>
+  <details class="methods"><summary>实验原理、对照与当前边界</summary><div class="method-grid"><article><h3>怎样用到果蝇</h3><p>使用 FlyWire v783 整理数据的 138,639 个神经元和 15,091,983 条有向连接。游戏信息输入 LC4 / LPLC2 节点，沿归一化连接传播，再从 192 个下游节点读出左侧动作。动力学是人为设计的 tanh 速率模型。</p></article><article><h3>随机重连怎样比较</h3><p>在相同符号的边之间打乱上游来源，保持接收端权重和边条数。采用相同的输入编码、下游选择规则和训练数据，分别训练读出器。该对照允许重复连接，仅包含一个随机图种子，不是完整的生物优势验证。</p></article><article><h3>会不会越玩越会</h3><p>当前所有控制器在游戏时冻结。活动随输入变化，但参数不随接球结果更新。尚未复现 DishBrain 的活体培养、反馈刺激和生物学习；后续需要持续学习与冻结参数的配对比较。</p></article></div></details>
+  <footer><span>FlyWire / Shiu et al. · CC BY-NC 4.0 · 本地计算</span><a href="https://github.com/philshiu/Drosophila_brain_model" target="_blank" rel="noreferrer">原始模型与数据 ↗</a><button id="shutdown" class="text-button">停止本地服务</button></footer><div id="notice" role="status" aria-live="polite"></div>
+</main><script src="/motion.js"></script><script src="/app.js"></script>
+</body></html>

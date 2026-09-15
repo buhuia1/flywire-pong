@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "checks": {
+    "human_game_waits_for_serve": true,
+    "right_control_does_not_move_left": true,
+    "serve_angle_goes_up_and_left": true,
+    "human_return_angle_changes_direction": true,
+    "left_paddle_returns_automatically": true,
+    "human_miss_requires_new_serve": true,
+    "difficulty_speed_increases": true,
+    "difficulty_left_paddle_shrinks": true,
+    "deterministic_hard_game": true,
+    "invalid_controls_rejected": true,
+    "clones_share_only_immutable_weights": true,
+    "real_cpu_gpu_agree": true,
+    "rewired_cpu_gpu_agree": true,
+    "player_command_preserves_fly_controller": true,
+    "rewired_mode_uses_rewired_matrix": true,
+    "reset_clears_action_and_activity": true
+  },
+  "passed": true
+}

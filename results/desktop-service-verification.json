@@ -1,0 +1,11 @@
+{
+  "installed_api_ready": true,
+  "background_suspend": true,
+  "resumes_on_return": true,
+  "mouse_immediate": true,
+  "rewired_anatomy": true,
+  "rule_activity_blank": true,
+  "wall_elapsed_seconds": 18.002229600002465,
+  "simulated_seconds_during_idle": 15.000000000000092,
+  "cpu_neural_ms": 19.98710000043502
+}

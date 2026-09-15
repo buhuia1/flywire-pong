@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "seed": 42,
+  "static_samples": 1600,
+  "dynamic_steps": 4000,
+  "seconds_by_model": {
+    "real": 18.547853099997155,
+    "rewired": 18.350086500002362
+  },
+  "seconds": 36.89793959999952,
+  "target": "9 * (ball_y - paddle_y); same demonstration observations for all trained controllers",
+  "rule": "supervised ridge regression, ridge=0.2, standardized features",
+  "recurrent_weights_trained": false,
+  "online_learning": false,
+  "same_training_data_for_real_rewired_direct": true,
+  "same_readout_selection_rule_for_real_rewired": true,
+  "training_difficulties": [
+    "easy",
+    "normal",
+    "hard"
+  ],
+  "training_game_seeds": [
+    101,
+    301,
+    501,
+    701,
+    901,
+    1101,
+    1301,
+    1501,
+    1701,
+    1901,
+    2101,
+    2301,
+    2501,
+    2701,
+    2901,
+    3101,
+    3301,
+    3501,
+    3701,
+    3901
+  ],
+  "brain_config": {
+    "seed": 17,
+    "gain": 0.9,
+    "leak": 0.8,
+    "substeps": 2,
+    "neurons": 138639,
+    "edges": 15091983,
+    "device": "cuda",
+    "observed_neurons": 192,
+    "graph": "real"
+  }
+}

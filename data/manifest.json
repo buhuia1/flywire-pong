@@ -1,0 +1,44 @@
+{
+  "dataset": "FlyWire FAFB v783, Shiu repository prepared subset",
+  "neurons": 138639,
+  "source_edge_rows": 15091983,
+  "effective_edges": 15091983,
+  "source_contact_sum": 54492922,
+  "input_neurons": 314,
+  "observed_neurons": 192,
+  "input_types": [
+    "LC4",
+    "LPLC2"
+  ],
+  "readout_directly_driven": false,
+  "model": "signed connectome-constrained leaky tanh rate network; dimensionless activity",
+  "normalization": "signed synaptic counts divided by total absolute incoming weight per neuron",
+  "scientific_scope": "task-transfer prototype; not original LIF physiology, fly vision, or biological learning",
+  "upstream_commit": "91bdd1e7dcf193f3e7ca5a8933497fcef63b7960",
+  "annotation_commit": "32b00011e83c3dc85fa3ea0b3934155b04f1635d",
+  "sources": [
+    "https://github.com/philshiu/Drosophila_brain_model",
+    "https://github.com/DenisSergeevitch/desktop-fly",
+    "https://www.nature.com/articles/s41586-024-07763-9",
+    "https://www.nature.com/articles/s41586-024-07558-y"
+  ],
+  "data_license": "CC BY-NC 4.0; see THIRD_PARTY.md",
+  "files": {
+    "Completeness_783.csv": {
+      "bytes": 3327347,
+      "sha256": "bbb847a4cc2caaa7a16349722d220c087317b946d148d4d592d94d250617a311"
+    },
+    "Connectivity_783.parquet": {
+      "bytes": 100804642,
+      "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347"
+    },
+    "circuit_annotations.json": {
+      "bytes": 408374,
+      "sha256": "da53640e4dc7071c26892870ec5b28984c4cfc74c1c44d3a3cde0a2913579d0f"
+    },
+    "flywire_graph.npz": {
+      "bytes": 57219780,
+      "sha256": "6e9f038611caaf8773380ef735f062ad1b14d75727b2faf5d5e5744e51a81b6f"
+    }
+  }
+}

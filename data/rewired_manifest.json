@@ -1,0 +1,34 @@
+{
+  "kind": "artificial signed presynaptic-source shuffle",
+  "seed": 20260915,
+  "source_sha256": "6e9f038611caaf8773380ef735f062ad1b14d75727b2faf5d5e5744e51a81b6f",
+  "file_sha256": "ba6528d2752602c3cafd712bb277c10eb703d13b3cfb5cc8448ac512f8f92f1a",
+  "neurons": 138639,
+  "edge_entries": 15091983,
+  "distinct_pairs": 15033696,
+  "parallel_entries_after_shuffle": 58287,
+  "matched": [
+    "signed source multiplicities",
+    "receiving edge slots",
+    "each receiving signed weight",
+    "node count",
+    "encoder",
+    "number of readouts",
+    "readout-selection procedure",
+    "training budget"
+  ],
+  "not_matched": [
+    "outgoing strength per neuron",
+    "unique-neighbor degree",
+    "individual readout cell IDs"
+  ],
+  "caveat": "One artificial graph seed; permits parallel edges/autapses. Not a full degree/strength-preserving ensemble.",
+  "checks": {
+    "same_edge_entries": true,
+    "same_receiving_slots_and_weights": true,
+    "same_outgoing_edge_entry_counts": true,
+    "input_readout_disjoint": true,
+    "changed_source_fraction": 0.9999496421378158
+  },
+  "seconds": 11.0176887000016
+}

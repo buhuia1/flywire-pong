@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FlyWire · 胞体位置与模拟活动</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/brain.css"></head>
+<body><main>
+<header class="top"><div class="brand"><span class="mark">F</span><div><b>FlyWire Anatomy</b><small>真实胞体位置 × 当前游戏的模拟状态</small></div></div><a id="back" href="/" target="_blank" rel="noopener">打开游戏 ↗</a></header>
+<section class="intro"><div><span class="eyebrow">MEASURED ANATOMY / SIMULATED ACTIVITY</span><h1>接线图中的细胞，在哪里？</h1><p>每个点是一处实测胞体位置。颜色可以显示细胞类别，或这局游戏中计算出的活动强度。</p></div></section>
+<div class="atlas-boundary"><b>亮起来的是模型状态。</b>这里没有活体钙成像或电生理记录。胞体位置不能代表该细胞全部树突、轴突和突触所在的脑区。</div>
+<div class="atlas-controls"><label>颜色表示<select id="color-mode"><option value="class">官方细胞大类</option><option value="activity">模拟活动强度 |x|</option><option value="ports">游戏输入 / 动作读出位置</option></select></label><label>旋转 <input id="rotate" aria-label="水平旋转脑图" type="range" min="-180" max="180" value="0"></label><label>缩放 <input id="zoom" aria-label="脑图缩放" type="range" min="60" max="260" value="115"></label><button id="reset-view">恢复视角</button><span id="atlas-status" role="status">正在加载实测位置…</span></div>
+<section class="atlas-layout"><div class="atlas-viewport"><canvas id="brain" aria-label="可旋转的真实胞体位置点云；拖动旋转，滚轮缩放。也可使用上方滑杆。"></canvas><p id="selection" class="atlas-selection" aria-live="polite">点击一个点，查看神经元 ID、类别和当前模拟值。</p><div id="legend" class="atlas-legend"></div></div>
+<aside class="atlas-types"><h2>哪些细胞类型响应较强？</h2><p>按同类细胞的平均 |x| 排序；统计整张模型图中有类型标注且同类至少 5 个的细胞，使用全部节点，独立于绘图抽样。</p><ol id="types"><li>等待活动数据…</li></ol><p class="atlas-note">这是细胞类型汇总，不能当作“脑区激活排名”。输入细胞由程序直接驱动，排名靠前不代表它负责接球。</p></aside></section>
+<p id="coverage" class="atlas-coverage"></p>
+<details class="methods"><summary>这张图能说明什么？</summary><div class="method-grid"><article><h3>真实的位置</h3><p>FlyWire v783 官方标注按神经元 ID 与当前模型逐一匹配。只画有 soma 坐标的细胞，不给缺失位置的细胞编造坐标。图上省略了大多数细胞以保持清晰，计算仍使用完整模型图。</p></article><article><h3>模拟的活动</h3><p>活动取自你当前游戏会话的同一个网络状态，单位为任意单位 a.u.，不是放电频率。切换规则跟球等非神经网络对照时，不显示神经活动。暂停可保留当前状态观察。</p></article><article><h3>尚未回答的生物问题</h3><p>要判断哪个脑区参与行为，还需要突触位置与脑区标注、刺激前后对照，以及针对候选细胞的干预和真实实验验证。本页没有重建树突、轴突或脑区表面。</p></article></div></details>
+<footer><span>FlyWire neuron annotations · Schlegel / Dorkenwald / Matsliah / Berg et al.</span><a href="https://github.com/flyconnectome/flywire_annotations" target="_blank" rel="noreferrer">数据来源 ↗</a></footer>
+</main><script src="/brain.js"></script></body></html>
